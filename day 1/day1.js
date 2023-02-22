@@ -26,42 +26,14 @@
   boolean,underfined and null data types
   */
   
-  // assign a string
-
-  let javaScript = 'string';
-
-  // assign a boolean
-
-  let setBe = true;
-
-  // assign undefined
-
-  let coding;
-
-  // assign null
-
-  let letSee = null;
+          //check variable.js
 
    /*
     (Question 5) Create dataypes.js file and use the javaScript typeof operator to check different data
      types. check the data types of each variable
    */
     
-     const checkTHis = 'Mark';  
-     console.log(typeof checkTHis);   // string
-
-     const setbeCheck = true;
-     console.log(typeof setbeCheck);  // boolean
-
-     let codebe;
-     console.log(typeof codebe);     // undefined
-
-     let seeNull = '0';           // null
- 
-
-
-
-
+        //check datatypes.js
   /*
   (Question 6). Declear four variable without assigning values
    */
@@ -114,6 +86,6 @@
       console.log(myAge);
 
       const yourAge = 29;
-      
+
       console.log(yourAge);
 
