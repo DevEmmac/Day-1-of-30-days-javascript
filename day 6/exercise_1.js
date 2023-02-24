@@ -198,7 +198,7 @@ console.log(uniqueNum);
 
 /*
  (question 15)
- Develop a small script which generate a six character random idi 
+ Develop a small script which generate a six character random id
 */
   
   for (let i = 0;i < 1;i++) {

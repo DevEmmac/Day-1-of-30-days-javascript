@@ -18,7 +18,7 @@ id;
 
 /*
 (Question 3)
-write a script which generates a ran dom rgb color numbers
+write a script which generates a random rgb color numbers
 */
 
 const x = Math.floor(Math.random()) * 256;
@@ -155,15 +155,39 @@ Iterate through the array, ["HTML", "CSS", "JS", "React",
  of loop and print out the items.
 */
 
-for (const web of webTech) {
+for (const web of webTechs) {
     console.log(web)
 }
 
 /*
 (Question 15)
- */
+This is a fruit array , ['banana', 'orange', 'mango', 'lemon']
+ reverse the order using loop without using a reverse method.
+*/
+
 console.log(fruit.sort())
+const reversedFruit = [];
+for (let i = fruit.length -1;i >= 0;i--) {
+    const reverse = fruit[i];
+    reversedFruit.push(reverse)
+}
+console.log(reversedFruit);
 
 
+/*
+(Question 16)
+print all the elements of array as shown below
+*/
+
+
+const fullStack = [
+    ['HTML', 'CSS', 'JS', 'React'],
+    ['Node', 'Express', 'MongoDB']
+  ]
+for (let i = 0; i < fullStack.length; i++) {
+    for (let j = 0; j < fullStack[i].length; j++) {
+      console.log(fullStack[i][j].toUpperCase())       
+    }
+}
 
 
