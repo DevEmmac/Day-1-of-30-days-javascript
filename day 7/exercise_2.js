@@ -241,7 +241,61 @@ Writ a function which generates a randomUserIp.
 */
 
  function randomUserIp () {
-     let ran = Math.random() * 100
-     return ran;
+     let random = Math.floor(Math.random() * 255) + '.' + Math.floor(Math.random() * 255) + '.' + Math.floor(Math.random() * 255)
+     return random;
  }
   console.log(randomUserIp(5))
+
+
+/*
+(Question 16)
+Write a function which generates a randomMacAddress
+*/
+
+function randomMacAddress () {
+  const rancha = new Array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G');
+     let randomCha2 = new Array(1);
+     let randomCha3= new Array(1);
+     let randomCha4 = new Array(1);
+     let randomCha5 = new Array(1);
+     let randomCha6 = new Array(1);
+     let randomCha7 = new Array(1);
+  for (let i = 0; i < 2; i ++) {
+      randomCha2[i] = rancha[Math.floor(Math.random() * 15)];
+      randomCha3[i] = rancha[Math.floor(Math.random() * 15)];
+      randomCha4[i] = rancha[Math.floor(Math.random() * 15)];
+      randomCha5[i] = rancha[Math.floor(Math.random() * 15)];
+      randomCha6[i] = rancha[Math.floor(Math.random() * 15)];
+      randomCha7[i] = rancha[Math.floor(Math.random() * 15)];
+      macAddress = randomCha2[0] + randomCha2[i] + ':' + randomCha3[0] + randomCha3[i] + ':' +  randomCha4[0] + randomCha4[i] + ':' +  randomCha5[0] + randomCha5[i] + ':' +  randomCha6[0] + randomCha6[i] + ':' +  randomCha7[0] + randomCha7[i];
+  }
+    return macAddress; 
+}
+console.log(randomMacAddress())
+
+
+/*
+(Question 17)
+Declare a function name randomHexaNumberGenerator. When this function
+is called it generates a random hexadecimal number. The function 
+return the hexadecimal number.
+*/
+
+function randomHexaNumberGenerator () {
+  let randomhexa = '#' + Math.floor(Math.random() * 1700000).toString(16);
+  return randomhexa;
+}
+console.log(randomHexaNumberGenerator());
+
+
+/*
+(Question 18)
+Declare a function name userIdGenerator. When this function is called
+it generates seven character id. The function return the id.
+*/
+
+function userIdGenerator () {
+  let userid = Math.random().toString(36).substring(2,9).toUpperCase(-1)
+  return userid
+}
+console.log(userIdGenerator())       // 41XTDbE

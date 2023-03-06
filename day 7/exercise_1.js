@@ -43,13 +43,10 @@ An area of a rectangle is calculated as follows: area = length x width.
  Write a function which calculates areaOfRectangle..
 */
 
- function areaOfRectangle () {
-    const length = 4
-    const width = 7
-    let area = length * width
+ function areaOfRectangle (length, width) {
     console.log(area)
  }
- areaOfRectangle()
+ areaOfRectangle(4, 7)
 
 /*
 (Question 5)
@@ -57,13 +54,11 @@ A perimeter of a rectangle is calculated as follows: perimeter= 2x(length + widt
 Write a function which calculates perimeterOfRectangle.
 */
 
-function perimeterOfRectangle () {
-    const length = 4
-    const width = 7
+function perimeterOfRectangle (length, width) {
     let perimeter = 2 * (length + width)
     console.log(perimeter)
  }
- perimeterOfRectangle()
+ perimeterOfRectangle(4, 7)
 
 
 /*
@@ -73,26 +68,22 @@ volume = length x width x height.Write a function which
  calculates volumeOfRectPrism.
 */
 
-   function volumeOfRectPrism () {
-      const length = 4
-      const width = 7
-      const heigth = 10
+   function volumeOfRectPrism (length, width, heigth) { 
       let volume = length * width * heigth
       console.log(volume)
    }
-   volumeOfRectPrism()
+    volumeOfRectPrism(4, 7, 10)
 
 /*
 (Question 7)
 Area of a circle is calculated as follows: area = π x r x r.
  Write a function which calculates areaOfCircle
 */
-  function areaOfCircle () {
-    const r = 10
-    let area = Math.PI * r * r
+  function areaOfCircle (r) {
+    let area = Math.floor(Math.PI * r * r)
     console.log(area)
   }
-  areaOfCircle()
+  areaOfCircle(5)
 
 
 /*
@@ -101,12 +92,11 @@ Circumference of a circle is calculated as follows: circumference
  = 2πr. Write a function which calculates circumOfCircle
 */
 
-  function circumOfCircle () {
-    const r = 10
-   let circumference = 2 * Math.PI * r
+  function circumOfCircle (r) {
+   let circumference = Math.floor(2 * Math.PI * r)
    console.log(circumference)
   }
-   circumOfCircle()
+   circumOfCircle(10)
 
 
 /*
@@ -115,13 +105,11 @@ Density of a substance is calculated as follows:density= mass/volume.
 Write a function which calculates density.
 */
 
-function densityOfsub () {
-    const mass = 5
-    const volume = 10  
+function densityOfsub (mass, volume) {  
     let density = mass/volume
     console.log(density)
  }
-  densityOfsub()
+  densityOfsub(5,10)
 
 
 /*
@@ -173,10 +161,21 @@ old or older.Check if a person is underweight, normal, overweight or
 obese based the information given below
 */
 
- function bmi (bmi = weight / (height * height) ) {
-     let bmi = weigth / height * height
-     if 
- }
+function bodyMassIndex (bmi = weight / (height * height) ) {
+   let bmi = Math.floor(weigth / (height * height))
+   if (bmi < 18.5) {
+    console.log(`Underweight: BMI ${bmi} is less than 18.5`)
+   } else if (bmi >= 18.5 <= 24.9) {
+    console.log(`Normal weigth: BMI ${bmi} is 18.5 to 24.9`)
+   } else if (bmi >= 25 <= 29.9) {
+    console.log(`Overweight: BMI ${bmi} is 25 to 29.9`)
+   } else {
+    console.log(`Obese: BMI is 30 or more`);
+   }
+   return
+   }
+    bodyMassIndex(25, 1.22);
+
 
 
 
@@ -186,12 +185,30 @@ Write a function called checkSeason, it takes a month parameter and
 returns the season:Autumn, Winter, Spring or Summer.
 */
 
-function checkSeason () {
-   if (season == Autumn) {
-      console.log('Season is autumn')
-   } else if (season == Winter) {
-      console.log('Season is winter')
-   } else if ( seadon == Spring) {
-      console.log('Spring')
+function checkSeason (month) {
+   let season = month
+   if (season <= 5) {
+       console.log('Season is autumn')
+   } else if (6 <= season && season <= 8) {
+       console.log('Season is winter')
+   } else if ( 9 <= season && season <= 11) {
+       console.log('Season is Spring')
+   } else {
+       console.log('Season is summer')
    }
-}
+ }
+  checkSeason(4)
+
+
+/*
+(Question 15)
+Math.max returns its largest argument. Write a function findMax that 
+takes three arguments and returns their maximum with out using
+Math.max method.
+*/
+
+   function findMax (num1, num2, num3) {
+         return Math.max(num1, num2, num3);
+   }
+     console.log(findMax(0, 10, 5))
+     console.log(findMax(0, -10, -2))
