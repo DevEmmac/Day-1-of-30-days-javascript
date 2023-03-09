@@ -1,22 +1,43 @@
- # **DAY 1: EXECISE**
+## A. Introduction:
+(i)   I was introduced to  what JavaScript is used for
 
-* Write a single line comment which says, comments can make code readable
+(ii)  I learnt about what was required to learn JavaScript
 
-* Write another single comment which says, Welcome to 30DaysOfJavaScript
+(iii) I installed Node.js
 
-* Write a multiline comment which says, comments can make code readable, easy to reuse and informative
+## B. Console.log: 
+* I learnt how to use console.log to display a JavaScript code in a browser console.
 
-* Create a variable.js file and declare variables and assign string, boolean, undefined and null data types
+## C. Comments:
+* Single Line Comments
+* Multi-Line Comments
 
-* Create datatypes.js file and use the JavaScript typeof operator to check different data types. Check the data type of each variable
+## D. Syntax
 
-* Declare four variables without assigning values
+## E. Arithmetric:
+* Addition
+* Subtraction
+* Division
+* Multiplication
+* Modulus
+* Exponential
 
-* Declare four variables with assigned values
+## F. How to add JavaScript to a webpage: 
+* Inline Script
+* Internal Script
+* External Script
+* Multi-External Script
 
-* Declare variables to store your first name, last name, marital status, country and age in multiple lines
+## G. Datatypes: (i)   Strings
+* Numbers
+* Booleans
+* Undefined
+* Null
+              
+## H. Checking Datatypes: 
+* Checking Datatypes using (typeof)
 
-* Declare variables to store your first name, last name, marital status, country and age in a single line
-
-* Declare two variables myAge and yourAge and assign them initial values and log to the browser console.
-
+## I. Variables: 
+* var
+* const
+* let
