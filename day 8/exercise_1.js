@@ -13,10 +13,7 @@ const dog = {}
 Print the the dog object on the console
 */
 
-const printDog = {
-
-}
-console.log(printDog);
+console.log(dog);
 
 /*
 (Question 3)
@@ -24,26 +21,26 @@ Add name, legs, color, age and bark properties for the dog object.
 The bark property is a method which return woof woof
 */
 
-const dogObject = {name: 'Bigo', legs: 'four', Color: 'Brown',
-                    age: 30, bark: 'woof woof',
-    getDogInfo: function () {
-        return `${this.bark}`
-    }
-}
-console.log(dogObject.bark)
+dog.name = 'Bigo',
+dog.legs = 4, 
+dog.color = 'brown',
+dog.age = 5
+dog.bark = function () { 
+        return 'woof woof';
+    };
 
 /*
 (Question 4)
 Get name, legs, color, age and bark value from the dog object
 */
 
-const dogObjt = {name: 'Bigo', legs: 'four', Color: 'Brown',
-                    age: 30, bark: 'woof woof',
-    getDogInfo: function () {
-        return `${this.name}, ${this.legs}`
-    }
-}
-console.log(dogObjt);
+
+console.log(dog.name);
+console.log(dog.legs);
+console.log(dog.color);
+console.log(dog.age);
+console.log(dog.bark);
+
 
 
 /*
