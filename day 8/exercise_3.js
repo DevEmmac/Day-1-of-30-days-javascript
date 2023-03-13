@@ -105,39 +105,130 @@ const users = [
     }
     ];
 
-    const products = [
-  {
-    _id: 'eedfcf',
-    name: 'mobile phone',
-    description: 'Huawei Honor',
-    price: 200,
-    ratings: [
-      { userId: 'fg12cy', rate: 5 },
-      { userId: 'zwf8md', rate: 4.5 }
-    ],
-    likes: []
-  },
-  {
-    _id: 'aegfal',
-    name: 'Laptop',
-    description: 'MacPro: System Darwin',
-    price: 2500,
-    ratings: [],
-    likes: ['fg12cy']
-  },
-  {
-    _id: 'hedfcg',
-    name: 'TV',
-    description: 'Smart TV:Procaster',
-    price: 400,
-    ratings: [{ userId: 'fg12cy', rate: 5 }],
-    likes: ['fg12cy']
+/*
+a. function called signUp which allows user to add to the
+collection.If user exists, inform the user that he has an account 
+already.
+ */
+
+function signUp (name,useremail,password) {
+  for (let i = 0; i < users.length; i++) {
+    if (users[i]['username'] === name || users[i]['email'] === useremail) {
+      return console.log('Username already exist');
+    }
+  } 
+    {
+      const date = new Date();
+      users.push({
+        _id: Math.random().toString(16).slice(2,8),
+        username: name,
+        email: useremail,
+        password: password,
+        createdAt: new Date().toLocaleString(),
+       isLoggedIn: false,
+      });
+        
+    }
+    console.log(users);
+    return users;
+}
+
+signUp('Olayiwola','eolasunkanmi@gmail.com', '12345');
+
+/*
+b. Create a function called signIn which allows user to sign in to
+the application
+*/
+
+ function signIn (username, password) {
+  for (let i = 0; i < users.length; i++) {
+      if (users[i].username.toLowerCase() === username.toLowerCase() && users[0].password === password) {
+          return users[i];
+      } else {
+          return "wrong username or password";
+      }
+   }
+  } 
+  signIn('Olayiwola', '12345');
+
+  /*
+  The products array has three elements and each of them has six 
+  properties. b. Create a function called averageRating which 
+  calculate the average rating of a product
+  */
+   
+  const products = [
+    {
+      _id: 'eedfcf',
+      name: 'mobile phone',
+      description: 'Huawei Honor',
+      price: 200,
+      ratings: [
+        { userId: 'fg12cy', rate: 5 },
+        { userId: 'zwf8md', rate: 4.5 }
+      ],
+      likes: []
+    },
+    {
+      _id: 'aegfal',
+      name: 'Laptop',
+      description: 'MacPro: System Darwin',
+      price: 2500,
+      ratings: [],
+      likes: ['fg12cy']
+    },
+    {
+      _id: 'hedfcg',
+      name: 'TV',
+      description: 'Smart TV:Procaster',
+      price: 400,
+      ratings: [{ userId: 'fg12cy', rate: 5 }],
+      likes: ['fg12cy']
+    }
+  ];
+
+  /*
+  a. Create a function called rateProduct which rates the product.
+  */
+   
+   function rateProduct (product, userId, rating) {
+       for(const element in products) {
+        if (products[element]['name'] === product) {
+            products[element]['ratings'].push({userId: userId, rate: rating});
+        }
+       }
+       console.log(products);
+       return products;
+   }
+   rateProduct('TV', 'Emmanuel', 6);
+
+/*
+b. Create a function called averageRating which calculate the 
+average rating of a product
+*/
+
+  function averageRating () {
+
   }
-]
 
-a. function called signUp which allows user to add to the collection.
- If user exists, inform the user that he has already an account.
 
- function signUp () {
-    
- }
+/*
+(Qustion 4)
+Create a function called likeProduct. This function will helps to like to the product if it is not liked and remove like if it was liked.
+*/
+
+ 
+function likeproduct (product, name) {
+  for (let element in products) {
+      if (products[element]['name'] === product && products[element]['likes'] !== name) {
+          products[element]['likes'].push(name);
+          console.log(products)
+          break;
+      } if (products[element]['name'] !== product) {
+          console.log("product doesn't exist" );
+          return 0;
+      }
+  }
+  return products;
+}
+likeproduct('mobile phone', 'Asab' );
