@@ -48,14 +48,10 @@ console.log(dog.bark);
 Set new properties the dog object: breed, getDogInfo
 */
 
-
-const dogProperties = {name: 'Bigo', legs: 'four', Color: 'Brown',
-                    age: 30, bark: 'woof woof',
-    getDogInfo: function () {
-        return `${this.name}, ${this.legs}`
+    dog.breed = 'bull';
+    getDogInfo = function () {
+        let dogInfo = `${this.name}, ${this.legs}, ${this.bark}`
+        return dogInfo;
     }
-}
-dogProperties.dogbreed = 'bull';
-
-console.log(dogProperties);
+    console.log(getDogInfo());
 
