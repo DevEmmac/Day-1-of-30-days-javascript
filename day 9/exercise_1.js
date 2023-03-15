@@ -192,5 +192,60 @@ Explain the diffence between some and every
 Use some to check if some names' length greater than seven in names array
 */
 
-const check = names.some((names) => names.length > 7)
-console.log(check)
+const checkSome = names.some((names) => names.length > 7)
+console.log(checkSome)
+
+/*
+(Question 21)
+Use every to check if all the countries contain the word land
+*/
+
+const checkEvery = countries.every((countries) => countries.includes('land'));
+console.log(checkEvery)
+
+
+/*
+(Question 22)
+Explain the difference between find and findIndex.
+*/
+
+// find return the first element which satisfies the condition
+     
+              // while
+
+// findIndex return the position of the first element which satisfies the condition.
+
+
+/*
+(Question 23)
+Use find to find the first country containing only six letters in the countries array
+*/
+
+const findTheFirst = countries.find((countries) => countries.length === 6)
+console.log(findTheFirst)
+
+
+/*
+(Questuion 24)
+Use findIndex to find the position of the first country containing only six letters in the countries array
+*/
+
+const positionOfCountry = countries.findIndex((countries) => countries.length === 6)
+console.log(positionOfCountry)
+
+/*
+(Question 25)
+Use findIndex to find the position of Norway if it doesn't exist in the array you will get -1.
+*/
+
+const findPosition = countries.findIndex((country) => country.includes('Norway'))
+console.log(findPosition)
+
+
+/*
+(Question 26)
+Use findIndex to find the position of Russia if it doesn't exist in the array you will get -1.
+*/
+
+const findRussia = countries.findIndex((country) => country.includes('Russia'))
+console.log(findRussia)
