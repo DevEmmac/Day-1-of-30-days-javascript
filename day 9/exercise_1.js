@@ -47,26 +47,26 @@ const products = [
 Use forEach to console.log each country in the countries array.
  */
 
-countries.forEach((countriest) => console.log(countries))
+countries.forEach((country) => console.log(countries))
 
 /*
 (Question 4)
 Use forEach to console.log each name in the names array.
 */
-names.forEach((names) => console.log(names))
+names.forEach((name) => console.log(names))
 
 /*
 (Question 5)
 Use forEach to console.log each name in the names array.
 */
-numbers.forEach((numbers) => console.log(numbers))
+numbers.forEach((number) => console.log(numbers))
 
 /*
 (Question 6)
 Use map to create a new array by changing each country to uppercase in the countries array.
 */
 
-const toUpperCase = countries.map((countries) => countries.toUpperCase())
+const toUpperCase = countries.map((country) => country.toUpperCase())
 console.log(toUpperCase)
 
 /*
@@ -74,7 +74,7 @@ console.log(toUpperCase)
 Use map to create an array of countries length from countries array.
 */
 
-const length = countries.map((countries) => countries.length)
+const length = countries.map((country) => country.length)
 console.log(length)
 
 /*
@@ -83,7 +83,7 @@ Use map to create a new array by changing each number to
 square in the numbers array
 */
 
-const squre = numbers.map((numbers) => numbers * numbers)
+const squre = numbers.map((number) => numbers * numbers)
 console.log(squre)
 
 /*
@@ -91,7 +91,7 @@ console.log(squre)
 Use map to change to each name to uppercase in the names array
 */
 
-const nameToUprCase = names.map((names) => names.toUpperCase())
+const nameToUprCase = names.map((name) => names.toUpperCase())
 console.log(nameToUprCase)
 
 /*
@@ -107,7 +107,7 @@ console.log(correspond)
 Use filter to filter out countries containing land.
 */
 
-const containLand = countries.filter((countries) => countries.includes('land'))
+const containLand = countries.filter((country) => country.includes('land'))
 console.log(containland)
 
 /*
@@ -115,7 +115,7 @@ console.log(containland)
 Use filter to filter out countries having six character.
 */
 
-const sixcharact = countries.filter((countries) => countries.length <= 6);
+const sixcharact = countries.filter((country) => country.length <= 6);
 console.log(containLand)
 
 /*
@@ -123,7 +123,7 @@ console.log(containLand)
 Use filter to filter out countries containing six letters and more in the country array.
 */
 
-const sixletter = countries.filter((countries) => countries.length >= 6);
+const sixletter = countries.filter((country) => countries.length >= 6);
 console.log(containLand)
 
 
@@ -132,7 +132,7 @@ console.log(containLand)
 Use filter to filter out country start with 'E';
 */
 
-const endwith= countries.filter((countries) => countries.startsWith('E'))
+const endwith= countries.filter((country) => countries.startsWith('E'))
 console.log(endwith)
 
 /*
@@ -192,15 +192,15 @@ Explain the diffence between some and every
 Use some to check if some names' length greater than seven in names array
 */
 
-const checkSome = names.some((names) => names.length > 7)
-console.log(checkSome)
+const checkSome = names.some((name) => name.length > 7)
+console.log(checkSome);
 
 /*
 (Question 21)
 Use every to check if all the countries contain the word land
 */
 
-const checkEvery = countries.every((countries) => countries.includes('land'));
+const checkEvery = countries.every((country) => country.includes('land'));
 console.log(checkEvery)
 
 
@@ -221,7 +221,7 @@ Explain the difference between find and findIndex.
 Use find to find the first country containing only six letters in the countries array
 */
 
-const findTheFirst = countries.find((countries) => countries.length === 6)
+const findTheFirst = countries.find((country) => country.length === 6)
 console.log(findTheFirst)
 
 
@@ -230,7 +230,7 @@ console.log(findTheFirst)
 Use findIndex to find the position of the first country containing only six letters in the countries array
 */
 
-const positionOfCountry = countries.findIndex((countries) => countries.length === 6)
+const positionOfCountry = countries.findIndex((country) => country.length === 6)
 console.log(positionOfCountry)
 
 /*

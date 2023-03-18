@@ -52,7 +52,7 @@ console.log(countriesIStartWith)
 /*
 (Question 5)
 Declare a getFirstTenCountries function and return an array of ten
- countries. Use different functional programming to work on the countries.js array
+countries. Use different functional programming to work on the countries.js array
 */
 
 
@@ -72,6 +72,7 @@ Declare a getLastTenCountries function which returns the
 last ten countries in the countries array.
 */
 
+
 function getLastTenCountries () {
          let n = 10;
           const getlastTen = countriesArr.slice(-n).map((country) => country)
@@ -87,6 +88,7 @@ function getLastTenCountries () {
 Find out which letter is used many times as initial for a country
 name from the countries array (eg. Finland, Fiji, France etc)
 */
+
 
 function mostFrequentInitialLetter () {
     let frequentLetter = countriesArr.map(([country]) => country).reduce((acc, cur) => { 
