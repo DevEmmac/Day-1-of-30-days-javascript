@@ -2,7 +2,7 @@
 * Higher order functions are functions which take other function as a parameter or return a function as a value. The function passed as a parameter is called callback.
 
 ## Callback
-* A callback is a function which can be passed as parameter to other function. See the example below.
+* A callback is a function which can be passed as parameter to other function.
 
 ## Returning function
 * Higher order functions return function as a value​
@@ -21,6 +21,6 @@
 * findIndex
 * some
 * sort
-   - Soerting string values
+   - Sorting string values
    - sorting Numeric values
    - sorting object Arrays
