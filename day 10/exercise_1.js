@@ -25,10 +25,9 @@ console.log(setZeroToTen)
 Remove an element from a set
 */
 
-for (let i = 0; i < 10; i++) { // iterating from 0 to 10
-    setZeroToTen.add(i).delete(5)
- }
- console.log(setZeroToTen)
+
+setZeroToTen.delete(5)
+console.log(setZeroToTen)
  
 
 /*
@@ -36,9 +35,8 @@ for (let i = 0; i < 10; i++) { // iterating from 0 to 10
 Clear a set
 */
 
-for (let i = 0; i < 10; i++) { // iterating from 0 to 10
-    setZeroToTen.clear(i)
- }
+
+ setZeroToTen.clear();
  console.log(setZeroToTen)
 
 
@@ -66,14 +64,14 @@ console.log(setOfDrinks)
 Create a map of countries and number of characters of a country
 */
 
-const countries = ['Togo', 
-                  'Ganna', 
-                  'India', 
-                  'Dubai', 
-                  'SouthAfrica',
-                  'London',
-                  'Paris',
-                  'Canada'
+const countries = [
+                     ['Togo', 
+                     'Ganna'],
+                     ['India', 
+                     'Dubai'],
+                     ['SouthAfrica',
+                     'London']
                   ]
-const setOfcounts = countries.map((country) => `${country} : ${country.length}`)
-console.log(setOfcounts) 
+const set = new Map(countries)
+console.log(set)
+console.log(set.size)
