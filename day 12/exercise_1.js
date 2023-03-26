@@ -24,27 +24,33 @@ The position of some particles on the horizontal x-axis
 and find the distance between the two furthest particles
 */
 
-const txt = 'The position of some particles on the horizontal x-axis -12, -4, -3 and -1 in the negative direction, 0 at origin, 4 and 8 in the positive direction. Extract these numbers and find the distance between the two furthest particles';
-const points = /\d/g;
-const result = txt.match(points);
 
+const points = /-?\d/g;
+const resultForpoint = txt.match(points);
+console.log(resultForpoint)
 
-const txt = 'The position of some particles on the horizontal x-axis -12, -4, -3 and -1 in the negative direction, 0 at origin, 4 and 8 in the positive direction. Extract these numbers and find the distance between the two furthest paricles';
-const points = /\d/g;
-const results = txt.match(points);
-console.log(results)
+const sortedPoint =  /-?\d/g;
+const resultForDistance=txt.match(sortedPoint);
+resultForDistance.sort()
+console.log(resultForDistance)
 
-const sortedPoints =  /-?\d/g;
-const result =txt.match(sortedPoints);
-result.sort()
-console.log(result)
-
-
-const sortedPoint =  /[\d]-?\d/g;
-const resultCheck = txt.match(sortedPoint);
+const distance =  /[\d]-?\d/g;
+const resultCheck = txt.match(distance);
 console.log(resultCheck)
 
 
-// points = ['-1', '2', '-4', '-3', '-1', '0', '4', '8']
-// sortedPoints =  [-4, -3, -1,
+/*
+(Question 3)
+Write a pattern which identify if a string is a valid JavaScript
+variable
+*/
 
+const patternAz = /[Ff]irst_?name/g
+const name = 'first_name';
+const testFor = patternAz.test(name);
+console.log(testFor)
+
+const patternA = /^[a-z]$/
+const nameA = 'first-name';
+const testForA = patternA.test(nameA);
+console.log(testForA)
