@@ -45,17 +45,16 @@ Clear a set
 Create a set of 5 string elements from array
 */
  
+
 const softDrinks = ['Coke', 
                   'Fanta', 
                   'Mirinda', 
                   'Smoov', 
                   'MountaindEW',
-                  'Smoov',
-                  'Coke',
-                  'Mirinda',
-                  'Fanta'
-                  ]
-const setOfDrinks = new Set(softDrinks)
+                  'Pepsi',
+                  'Magroov'
+                  ];
+const setOfDrinks = new Set(softDrinks.slice(0,5));
 console.log(setOfDrinks)
 
 
@@ -64,14 +63,14 @@ console.log(setOfDrinks)
 Create a map of countries and number of characters of a country
 */
 
+
 const countries = [
-                     ['Togo', 
-                     'Ganna'],
-                     ['India', 
-                     'Dubai'],
-                     ['SouthAfrica',
-                     'London']
-                  ]
-const set = new Map(countries)
-console.log(set)
-console.log(set.size)
+   'Togo', 
+   'Ganna',
+   'India', 
+   'Dubai',
+   'SouthAfrica',
+   'London'
+]
+const countriesAndNumb = countries.map((country) => `${country}: ${country.length}`)
+console.log(countriesAndNumb)
