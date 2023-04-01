@@ -1,0 +1,2 @@
+## Error Handling
+* Error Types
