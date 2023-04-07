@@ -2,8 +2,8 @@
 * HTML5 web storage is a new HTML5 API web storage which offer important benefits over traditional cookies
 
 ## B. There are two web storage Objects
-* sessionStorage
-* localStorage
+* sessionStorage (data stored get) cleared when the page is closed
+* localStorage (data stored  has no expiration time)
 
 ## C. Use case of Web Storge
 * Store data temporarilly
@@ -12,15 +12,10 @@
 * Can be used for user authentication method.
 * Data can be made available between page 
 requesrs, multiple brower tabs, and aslo between browser sessions using localStorage.
-<<<<<<< HEAD
 ## d. HTML5 Web Storage Objects
-* Setting items to the localStorage
-* Getting item from localStorage
-* Clearing the localStorageg
-=======
-
-## D. HTML5 Web Storage Objects
-* Setting items to the localStorage
-* Getting item from localStorage
-* Clearing the localStorage
->>>>>>> 46914f4c3836f97d10926c12e892d509ae8a52c6
+* localStorage - to display the localStorage object
+* localStorage.clear() - to remove everything in the local storage
+* localStorage.setItem() - to store data in the localStorage. It takes a key and a value parameters.
+* localStorage.getItem() - to display data stored in the localStorage. It takes a key as a parameter.
+* localStorage.removeItem() - to remove stored item form a localStorage. It takes key as a parameter.
+* localStorage.key() - to display a data stored in a localStorage. It takes index as a parameter.
