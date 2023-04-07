@@ -12,7 +12,15 @@
 * Can be used for user authentication method.
 * Data can be made available between page 
 requesrs, multiple brower tabs, and aslo between browser sessions using localStorage.
+<<<<<<< HEAD
 ## d. HTML5 Web Storage Objects
 * Setting items to the localStorage
 * Getting item from localStorage
 * Clearing the localStorageg
+=======
+
+## D. HTML5 Web Storage Objects
+* Setting items to the localStorage
+* Getting item from localStorage
+* Clearing the localStorage
+>>>>>>> 46914f4c3836f97d10926c12e892d509ae8a52c6
