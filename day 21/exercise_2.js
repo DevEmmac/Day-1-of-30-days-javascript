@@ -29,7 +29,7 @@ fourth paragraph a red color
 
 const allParagraph = document.querySelectorAll('p')
 allParagraph.forEach((paragraph, i) => {
-    /*
+    
     if (i % 2 === 0) {
         paragraph[0].style.color = 'green'
         paragraph[2].style.color = 'green'
@@ -37,7 +37,6 @@ allParagraph.forEach((paragraph, i) => {
         paragraph[1].style.color = 'red'
         paragraph[3].style.color = 'red'
     }
-    */
 })
 
 /*
@@ -47,7 +46,7 @@ Set text content, id and class to each paragraph
 
 const textForEachParagraph = documnet.querySelectorAll('p')
 textForEachParagraph.forEach((paragraph, i) => {
-    /*  if (i % 2 === 0 ) { 
+     if (i % 2 === 0 ) { 
     paragraph.textContent = 'first-paragraph'
     paragraph.setAttribute('class', 'first-text')
     paragraph.setAttribute('id', 'text1')
@@ -56,6 +55,5 @@ textForEachParagraph.forEach((paragraph, i) => {
     paragraph.setAttribute('class', 'second-text')
     paragraph.setAttribute('id', 'text2')
     } 
-    */
    console.log(paragraph, i)
 })
