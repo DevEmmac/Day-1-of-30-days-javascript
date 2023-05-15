@@ -30,10 +30,6 @@ input.style.padding = '11px 15rem 11px 4px'
 input.style.marginRight = '20px'
 input.style.marginTop = 'none'
 input.style.border = '2px solid #5bbc7a'
-// input.addEventListener('click', e => {
-
-// })
-// input.style.backgroundColor = 'red'
 
 let generator = document.querySelector('.generator')
 
@@ -46,9 +42,6 @@ container.style.display = 'grid'
 container.style.gridTemplateColumns = 'repeat(9, 1fr)'
 container.style.marginTop = '20px'
 container.style.width = '100%'
-// container.style.paddingRight = '50px'
-
-
 
 let button = document.querySelector('button') 
 button.style.backgroundColor = '#5bbc7a'
@@ -60,8 +53,8 @@ button.style.fontSize = '20px'
 function isPrime(num) {
     if(num < 2) return false;
   
-    for (let k = 2; k < num; k++){
-      if( num % k == 0){
+    for (let i = 2; i < num; i++){
+      if( num % i == 0){
         return false;
       }
     }
