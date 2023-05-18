@@ -1,10 +1,7 @@
-//document.body.style.width = '100%'
-//document.body.style.backgroundImage = 'galaxy.gif'
-
 let input = document.querySelector('input')
 let selector = document.querySelector('select')
 let button = document.querySelector('button')
-let textEl = document.querySelector('.text')
+let text = document.querySelector('.text')
 
 const planetsGravity = [
     {
@@ -49,9 +46,6 @@ const planetsGravity = [
     },
 ]
 
-selector.innerHTML += planetsGravity.map(planets => `
-<option value = '${planets.planet}'>${planets.planet.toUpperCase()}</option>`)
-
 let value;
 let mass;
 let weight;
@@ -71,22 +65,24 @@ function result() {
         .setAttribute('src', `./images/${value}.png`)
     planetsGravity.map((p) => {
         if (p.planet == value) {
-            textEl.textContent = `The weight of the object on ${value.toUpperCase()}`
+            text.textContent = `The weight of the object on ${value.toUpperCase()}`
             weight = document.createElement('span')
-            textEl.append(weight)
-            textEl.style.color = 'white'
-            textEl.style.background = 'rgba(255, 255, 255, 0.2)'
-            textEl.style.height = '10rem'
-            textEl.style.width = '25rem'
-            textEl.style.display = 'grid'
-            textEl.style.alignItems = 'center'
-            textEl.style.placeItems = 'center'
-            textEl.style.fontWeight = '800'
-            textEl.style.marginLeft = '2rem'
+            text.append(weight)
+            text.style.color = 'white'
+            text.style.background = 'rgba(255, 255, 255, 0.2)'
+            text.style.height = '13rem'
+            text.style.width = '35rem'
+            text.style.display = 'grid'
+            text.style.margin = 'auto 3.5rem'
+            text.style.alignItems = 'center'
+            text.style.placeItems = 'center'
+            text.style.fontWeight = '700'
+            text.style.fontSize = '1.5rem'
             weight.textContent = `${(mass * p.gravity).toFixed(2)} N`
             weight.style.background = 'rgba(255, 255, 255, 0.3)'
             weight.style.borderRadius = '50%'
-            weight.style.padding = '2.5rem 1.5rem'
+            weight.style.padding = '3rem 2rem'
+            weight.style.marginBottom = '1rem'
             weight.style.fontWeight = '1000'
         }
     })
@@ -95,30 +91,30 @@ function result() {
 
 button.addEventListener('click', e => {
     if (!mass) {
-        textEl.textContent = "Mass is required"
-        textEl.style.color = 'white'
-        textEl.style.background = 'rgba(255, 255, 255, 0.2)'
-        textEl.style.height = '3rem'
-        textEl.style.width = '25rem'
-        textEl.style.display = 'flex'
-        textEl.style.justifyContent = 'center'
-        textEl.style.alignItems = 'center'
-        textEl.style.fontWeight = '800'
+        text.textContent = "Mass is required"
+        text.style.color = 'white'
+        text.style.background = 'rgba(255, 255, 255, 0.2)'
+        text.style.height = '3rem'
+        text.style.width = '25rem'
+        text.style.display = 'flex'
+        text.style.justifyContent = 'center'
+        text.style.alignItems = 'center'
+        text.style.fontWeight = '800'
         document.querySelector('img')
             .setAttribute('src', `./ images / ${" "}.png`)
         return
     }
 
     if (!value) {
-        textEl.textContent = "You did not choose a planet yet"
-        textEl.style.color = 'white'
-        textEl.style.background = 'rgba(255, 255, 255, 0.2)'
-        textEl.style.height = '3rem'
-        textEl.style.width = '25rem'
-        textEl.style.display = 'flex'
-        textEl.style.justifyContent = 'center'
-        textEl.style.alignItems = 'center'
-        textEl.style.fontWeight = '800'
+        text.textContent = "You did not choose a planet yet"
+        text.style.color = 'white'
+        text.style.background = 'rgba(255, 255, 255, 0.2)'
+        text.style.height = '3rem'
+        text.style.width = '25rem'
+        text.style.display = 'flex'
+        text.style.justifyContent = 'center'
+        text.style.alignItems = 'center'
+        text.style.fontWeight = '800'
         document.querySelector('img')
             .setAttribute('src', `./ images / ${""}.png`)
         return
@@ -127,22 +123,3 @@ button.addEventListener('click', e => {
     result()
 
 })
-
-let generateColor = () => {
-    let Alphanumeric = '0123456789abcdef'
-    let emptyStr = ''
-    let index
-    for (let i = 0; i < 6; i++) {
-        index = Math.floor(Math.random() * Alphanumeric.length)
-        index = Alphanumeric[index]
-        emptyStr = emptyStr + index
-    }
-    return '#' + emptyStr
-}
-
-let owner = document.querySelector('.owner')
-
-setInterval(() => {
-    owner.style.color = generateColor()
-
-}, 1000)
