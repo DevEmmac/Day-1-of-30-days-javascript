@@ -1,0 +1,69 @@
+body,
+html {
+    margin: 0%;
+    padding: 0%;
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+#countries {
+    text-align: center;
+    background: #f0f0f0;
+    padding: 1rem;
+}
+
+h2 {
+    color: orange;
+    font-size: 3.5rem;
+    margin: 0.5rem;
+    font-weight: 400;
+}
+
+p {
+    display: inline;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+h4 {
+    text-align: center;
+    margin: 0.5rem 0;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+button {
+    background-color: orange;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1.5rem;
+    margin-right: 0.5rem;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.graph-buttons {
+    text-align: center;
+    padding-top: 2rem
+}
+
+.graphs {
+    background: #f0f0f0;
+    padding: 2rem 0;
+    display: grid;
+    margin-top: 0;
+    box-shadow: 0px -1px 3px 0px #d6d4d4
+}
+
+.graph-wrapper {
+    margin: auto;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-gap: 0.4rem;
+}
+
+.range {
+    height: 1.6rem;
+    background: orange;
+}
