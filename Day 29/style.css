@@ -1,0 +1,59 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 10rem 0 10rem;
+    border: 2px solid transparent;
+    height: 50rem;
+    box-shadow: 1px 1px 5px 5px #80808047;
+}
+
+.mini-container {
+    display: block;
+    border: 1px solid transparent;
+    text-align: center;
+    margin: auto;
+    width: 95%;
+    height: 45rem;
+    box-shadow: 3px 3px 10px 5px #80808047;
+
+}
+span{
+    animation-name: opa;
+    animation-duration: 4s;
+    animation-iteration-count:infinite;
+    text-transform: uppercase;
+    font-size: 7rem;
+    padding: 3rem 0 0 1rem;
+    line-height: 8.5rem;
+}
+
+@keyframes opa {
+    
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0.3;
+    }
+
+    60%{
+        opacity: 0.5;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .main-container {
+        max-width: 60%;
+    }
+}
